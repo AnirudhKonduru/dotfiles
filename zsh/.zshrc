@@ -36,3 +36,13 @@ zstyle :compinstall filename '/home/ani/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+[ -f ~/.profile ] source ~/.profile
+[ -f ~/.bash_aliases ] source ~/.bash_aliases
+[ -f ~/.bash_profile ] source ~/.bash_profile
+
+unsetopt inc_append_history
+unsetopt share_history
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
