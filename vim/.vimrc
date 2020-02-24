@@ -9,7 +9,7 @@ set softtabstop=4
 set expandtab
 
 " ui
-set number
+set number relativenumber
 set showcmd
 set cursorline
 filetype indent on
