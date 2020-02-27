@@ -2,6 +2,7 @@
 
 " colors
 syntax enable
+colorscheme jellybeans
 
 " space and tabs
 set tabstop=4
