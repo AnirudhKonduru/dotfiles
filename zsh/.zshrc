@@ -14,3 +14,5 @@ unsetopt share_history
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+for config (~/.zsh/*.zsh) source $config
+
