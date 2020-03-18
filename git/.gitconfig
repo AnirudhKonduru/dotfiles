@@ -1,3 +1,7 @@
 [user]
-	name = Anirudh Konduru
-	email = anirudhmkonduru@gmail.com
+        name = Anirudh Konduru
+        email = anirudhmkonduru@gmail.com
+
+[include]
+        path = .work.gitconfig
+
