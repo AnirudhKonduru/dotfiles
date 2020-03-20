@@ -12,6 +12,9 @@ setopt appendhistory autocd beep extendedglob nomatch notify
 unsetopt inc_append_history
 unsetopt share_history
 
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 for config (~/.zsh/*.zsh) source $config
