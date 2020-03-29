@@ -5,3 +5,6 @@
 [include]
         path = .work.gitconfig
 
+[alias]
+        c = commit -s 
+
