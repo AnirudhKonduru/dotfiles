@@ -6,5 +6,6 @@
         path = .work.gitconfig
 
 [alias]
-        c = commit -s 
+        c = commit -s
+        l = log --graph --all --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) %C(cyan)<%an>%Creset'
 
