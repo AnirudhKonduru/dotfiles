@@ -7,7 +7,6 @@ setopt appendhistory autocd beep extendedglob nomatch notify
 
 [ -f ~/.profile ] && source ~/.profile
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
-[ -f ~/.bash_profile ] && source ~/.bash_profile
 
 unsetopt inc_append_history
 unsetopt share_history
