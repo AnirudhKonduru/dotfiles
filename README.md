@@ -24,7 +24,7 @@ stow zsh
 # multiple at a time
 stow vim git tmux
 # all the configs
-stow *
+stow */
 ```
 To install to the root user instead:
 ```sh

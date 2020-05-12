@@ -14,6 +14,9 @@ unsetopt share_history
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
+# vim masterrace
+export EDITOR=`which vim`
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 for config (~/.zsh/*.zsh) source $config
