@@ -9,6 +9,7 @@
 [alias]
 	c = commit -S 
 	l = log --graph --all --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) %C(cyan)<%an>%Creset'
+	del-dangling-commits = "!sh git reflog expire --expire-unreachable=now --all && git gc --prune=now"
 
 [gpg]
 	program = gpg
