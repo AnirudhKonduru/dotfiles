@@ -14,6 +14,9 @@ unsetopt share_history
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
+# use emacs style key bindings
+bindkey -e
+
 # vim masterrace
 export EDITOR=`which vim`
 
