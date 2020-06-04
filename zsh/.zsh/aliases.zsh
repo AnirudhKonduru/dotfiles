@@ -9,7 +9,15 @@ export LC_ALL=en_US.UTF-8
 alias less='less -rN '
 alias wget='wget -c '
 
-alias ls="ls --color=auto -hF "
+case "$OSTYPE" in
+  linux*)
+    alias ls="ls --color=auto -hF "
+  ;;
+  dragonfly*|freebsd*|netbsd*|openbsd*|darwin*)
+    alias ls="ls -hGF "
+  ;;
+esac
+
 alias la='ls -a '
 alias ll='ls -l '
 alias lt='ls -t '
