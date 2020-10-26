@@ -1,15 +1,11 @@
-# Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-setopt appendhistory autocd beep extendedglob nomatch notify
-# End of lines configured by zsh-newuser-install
+HISTSIZE=5000
+SAVEHIST=5000
+setopt appendhistory share_history incappendhistory
+setopt autocd beep extendedglob nomatch notify
 
 [ -f ~/.profile ] && source ~/.profile
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
-
-unsetopt inc_append_history
-unsetopt share_history
 
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
