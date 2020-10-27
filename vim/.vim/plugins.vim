@@ -11,11 +11,13 @@ Plug 'bfrg/vim-cpp-modern'
 Plug 'nanotech/jellybeans.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'erichdongubler/vim-sublime-monokai'
+Plug 'morhetz/gruvbox'
 
 " misc
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
+Plug 'Valloric/YouCompleteMe', { 'commit':'d98f896' }
 
 call plug#end()
 

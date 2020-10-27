@@ -7,12 +7,13 @@ syntax enable
 set tabstop=4
 set softtabstop=4
 set expandtab
+set smartindent
 
 " ui
 set number relativenumber
+set nowrap
 set showcmd
 set cursorline
-filetype indent on
 
 set wildmenu
 set lazyredraw
@@ -21,6 +22,7 @@ set showmatch
 " searching
 set incsearch
 set hlsearch
+set smartcase
 nnoremap <CR> :noh<CR><CR>
 
 " folding
