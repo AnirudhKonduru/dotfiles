@@ -9,7 +9,7 @@ make_prompt() {
     fi
 
     local CWD="[%F{242}%2.%f]"
-    local END="%(?.%F{85}.%F{red})ꏸ%f"
+    local END="%(?.%F{85}.%F{red})⮞ %f"
 
 PROMPT=$USER$CWD$END
 }
