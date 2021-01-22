@@ -7,3 +7,9 @@ export LS_COLORS="di=1;34:ln=1;35:so=1;32:pi=0;33:ex=1;31:bd=34;46:cd=34;43:su=3
 # enable tty for typing passphrase 
 export GPG_TTY=$(tty)
 
+# lets you edit the current command in $EDITOR
+# if you do Ctrl-X Ctrl-E
+autoload edit-command-line
+zle -N edit-command-line
+bindkey "^X^E" edit-command-line
+
