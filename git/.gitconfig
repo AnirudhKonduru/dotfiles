@@ -1,7 +1,7 @@
 [user]
 	name = Anirudh Konduru
 	email = anirudhmkonduru@gmail.com
-	signingkey = E7182D4FE4665C70
+	signingkey = 672A9B6D556CC743
 
 [include]
 	path = .work.gitconfig
