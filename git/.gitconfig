@@ -3,9 +3,6 @@
 	email = anirudhmkonduru@gmail.com
 	signingkey = 672A9B6D556CC743
 
-[include]
-	path = .work.gitconfig
-
 [alias]
 	c = commit -S 
 	l = log --graph --branches --remotes --tags --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) %C(cyan)<%an>%Creset'
@@ -16,3 +13,5 @@
 [gpg]
 	program = gpg
 
+[include]
+	path = .override.gitconfig
