@@ -4,6 +4,9 @@ SAVEHIST=5000
 setopt appendhistory share_history incappendhistory
 setopt autocd beep extendedglob nomatch notify
 
+# turn off the beep
+unsetopt beep
+
 [ -f ~/.profile ] && source ~/.profile
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
 

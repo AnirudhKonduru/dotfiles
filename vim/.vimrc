@@ -14,6 +14,7 @@ set number relativenumber
 set nowrap
 set showcmd
 set cursorline
+set belloff=all
 
 set wildmenu
 set lazyredraw
