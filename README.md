@@ -36,3 +36,6 @@ stow zsh -t /root/
 stow -D zsh
 ```
 
+
+Wallpaper by rootkit from https://wallhaven.cc/w/k7v9yq
+
