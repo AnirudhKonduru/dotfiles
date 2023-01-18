@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d α β γ δ ε ζ η θ ι κ
 
 bspc config border_width         2
 bspc config window_gap          12
@@ -19,6 +19,6 @@ bspc rule -a Screenkey manage=off
 
 feh --bg-scale ~/.config/media/wallpaper.png
 
-polybar &
+polybar -r &
 alacritty &
 
