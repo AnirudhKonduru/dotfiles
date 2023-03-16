@@ -20,5 +20,6 @@ bspc rule -a Screenkey manage=off
 feh --bg-scale ~/.config/media/wallpaper.png
 
 polybar -r &
+nm-applet &
 alacritty &
 
