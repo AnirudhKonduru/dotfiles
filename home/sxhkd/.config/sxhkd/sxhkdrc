@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -combi-modi window,drun,ssh -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
+	rofi -combi-modi window,drun,ssh -show combi -icon-theme "Papirus" -show-icons
 
 # make sxhkd reload its configuration files:
 super + Escape
