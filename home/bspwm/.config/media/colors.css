@@ -1,0 +1,17 @@
+/* Colors derived from the current wallpaper. Serves as a reference while ricing */
+
+.global {
+/* CSS HEX */
+    --resolution-blue: #1D2D7Dff;
+    --royal-blue-traditional: #1B2362ff;
+    --periwinkle: #D3D6FEff;
+    --lapis-lazuli: #41648Eff;
+    --penn-blue: #11144Aff;
+    --penn-blue-2: #151C5Dff;
+    --vista-blue: #789CF8ff;
+    --azure: #4E7FDEff;
+    --vista-blue-2: #80A0CAff;
+    --space-cadet: #161B44ff;
+    --alert: #A54242;
+    --disabled: #787878;
+}
