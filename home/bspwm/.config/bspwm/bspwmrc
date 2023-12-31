@@ -19,7 +19,18 @@ bspc rule -a Screenkey manage=off
 
 feh --bg-scale ~/.config/media/wallpaper.png
 
-polybar -r &
-nm-applet &
-alacritty &
+~/.config/polybar/launch.sh &
 
+# start nm-applet and blueman-applet
+killall nm-applet &
+killall blueman-applet &
+killall cbatticon &
+killall libinput-gestures &
+
+sleep 3
+
+
+nm-applet &
+blueman-applet &
+cbatticon &
+libinput-gestures &
