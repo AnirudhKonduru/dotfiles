@@ -25,3 +25,7 @@ cargo install paru
 
 ### install pulseaudio-control
 paru -S --noconfirm --needed pulseaudio-control
+
+### install some preferred fonts (see fontconfig/fonts.conf)
+paru -S --noconfirm --needed ttf-cascadia-code-nerd ttf-jetbrains-mono-nerd ttf-firacode-nerd
+
