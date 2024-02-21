@@ -46,6 +46,7 @@ require("lazy").setup({
   { "folke/tokyonight.nvim", lazy = false, priority = 1000, opts = { style = "night" } },
   {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   { "tpope/vim-fugitive" },
+  { "airblade/vim-gitgutter" },
   { "VonHeikemen/lsp-zero.nvim", branch = "v3.x", dependencies = {
       {"williamboman/mason.nvim"},
       {"williamboman/mason-lspconfig.nvim"},
@@ -54,6 +55,12 @@ require("lazy").setup({
       {"hrsh7th/nvim-cmp"},
       {"L3MON4D3/LuaSnip"},
     }
+  },
+  { "folke/trouble.nvim", dependencies = { "nvim-tree/nvim-web-devicons" }},
+  { "nvimdev/lspsaga.nvim", dependencies = {
+      "nvim-treesitter/nvim-treesitter", -- optional
+      "nvim-tree/nvim-web-devicons",     -- optional
+    },
   },
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
@@ -66,6 +73,14 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+-- Trouble remaps
+vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle() end)
+vim.keymap.set("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)
+vim.keymap.set("n", "<leader>xd", function() require("trouble").toggle("document_diagnostics") end)
+vim.keymap.set("n", "<leader>xq", function() require("trouble").toggle("quickfix") end)
+vim.keymap.set("n", "<leader>xl", function() require("trouble").toggle("loclist") end)
+vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end)
 
 vim.cmd[[colorscheme tokyonight]]
 
@@ -86,4 +101,51 @@ require('mason-lspconfig').setup({
     lsp_zero.default_setup,
   },
 })
+
+local lsp_config = require('lspconfig')
+
+lsp_config.rust_analyzer.setup{
+  settings = {
+    ['rust-analyzer'] = {
+      cargo = {
+        allFeatures = true,
+      },
+      check = {
+        command = "clippy",
+      },
+      diagnostics = {
+        enable = false,
+      },
+    }
+  }
+}
+
+lsp_config.lua_ls.setup {
+  on_init = function(client)
+    local path = client.workspace_folders[1].name
+    if not vim.loop.fs_stat(path..'/.luarc.json') and not vim.loop.fs_stat(path..'/.luarc.jsonc') then
+      client.config.settings = vim.tbl_deep_extend('force', client.config.settings, {
+        Lua = {
+          runtime = {
+            -- Tell the language server which version of Lua you're using
+            -- (most likely LuaJIT in the case of Neovim)
+            version = 'LuaJIT'
+          },
+          -- Make the server aware of Neovim runtime files
+          workspace = {
+            checkThirdParty = false,
+            library = {
+              vim.env.VIMRUNTIME
+            }
+          }
+        }
+      })
+
+      client.notify("workspace/didChangeConfiguration", { settings = client.config.settings })
+    end
+    return true
+  end
+}
+
+require('lspsaga').setup({})
 
