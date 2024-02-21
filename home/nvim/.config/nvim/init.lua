@@ -2,6 +2,13 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<Leader>pv", vim.cmd.Ex)
 
+vim.keymap.set("i", "jk", "<ESC>")
+vim.keymap.set("i", "kj", "<ESC>")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-j>", "j<C-e>")
+vim.keymap.set("n", "<C-k>", "k<C-y>")
+
 -- Options
 vim.opt.relativenumber = true
 
@@ -11,6 +18,8 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 vim.opt.smartindent = true
+
+vim.opt.scrolloff = 5
 
 -- Plugins
 
