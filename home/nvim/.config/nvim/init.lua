@@ -138,7 +138,11 @@ lsp_zero.preset("recommended")
 lsp_zero.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings
   -- to learn the available actions
-  lsp_zero.default_keymaps({buffer = bufnr})
+  lsp_zero.default_keymaps({ buffer = bufnr })
+
+  if vim.lsp.inlay_hint then
+    vim.lsp.inlay_hint.enable(bufnr, true)
+  end
 end)
 
 require('mason').setup({})
