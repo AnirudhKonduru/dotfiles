@@ -73,6 +73,7 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>fF', function() builtin.find_files({ follow = true, hidden = true }) end)
 
 -- Trouble remaps
 vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle() end)
