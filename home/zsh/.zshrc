@@ -19,7 +19,8 @@ bindkey -e
 # vim masterrace
 export EDITOR=`which vim`
 
-
+SSH_AGENT_PID=""
+SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
 
 # Depending on how you installed fzf, it's shell files could be in any of these places
 # if installed with git
@@ -34,3 +35,10 @@ export EDITOR=`which vim`
 
 for config (~/.zsh/*.zsh) source $config
 
+source /usr/share/nvm/init-nvm.sh
+
+# opam configuration
+[[ ! -r /home/kondu/.opam/opam-init/init.zsh ]] || source /home/kondu/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+# >> k3s command completion (start)
+. <(k3s completion zsh)
+# >> k3s command completion (end)
