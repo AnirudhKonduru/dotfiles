@@ -10,6 +10,7 @@ vim.keymap.set("n", "<C-j>", "j<C-e>")
 vim.keymap.set("n", "<C-k>", "k<C-y>")
 
 -- Options
+vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4
@@ -20,6 +21,28 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 vim.opt.scrolloff = 5
+
+-- Search improvements
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+
+-- Better splits
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
+-- Enable mouse
+vim.opt.mouse = "a"
+
+-- Persistent undo
+vim.opt.undofile = true
+
+-- Better completion
+vim.opt.completeopt = "menuone,noselect"
+
+-- Show which line your cursor is on
+vim.opt.cursorline = true
 
 -- Plugins
 
@@ -52,6 +75,8 @@ require("lazy").setup({
       style = "night",
     },
   },
+  "rebelot/kanagawa.nvim",
+  "navarasu/onedark.nvim",
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   { "tpope/vim-fugitive" },
   { "lewis6991/gitsigns.nvim" },
@@ -230,7 +255,7 @@ require("gitsigns").setup({
 })
 
 -- theme
-vim.cmd([[colorscheme tokyonight]])
+vim.cmd([[colorscheme onedark]])
 
 -- lsp setup
 local lsp_zero = require("lsp-zero")
