@@ -173,6 +173,9 @@ vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope: Help t
 vim.keymap.set("n", "<leader>fF", function()
   builtin.find_files({ follow = true, hidden = true })
 end, { desc = "Telescope: Find files (include hidden)" })
+vim.keymap.set("n", "<leader>fG", function()
+  builtin.live_grep({ follow = true, hidden = true })
+end, { desc = "Telescope: Live grep (include hidden)" })
 
 -- Trouble remaps
 vim.keymap.set("n", "<leader>xx", function()
