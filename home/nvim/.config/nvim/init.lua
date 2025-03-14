@@ -77,6 +77,8 @@ require("lazy").setup({
   },
   "rebelot/kanagawa.nvim",
   "navarasu/onedark.nvim",
+  "morhetz/gruvbox",
+  "srcery-colors/srcery-vim",
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   { "tpope/vim-fugitive" },
   { "lewis6991/gitsigns.nvim" },
@@ -269,7 +271,7 @@ require("gitsigns").setup({
 })
 
 -- theme
-vim.cmd([[colorscheme onedark]])
+vim.cmd([[colorscheme srcery]])
 
 -- lsp setup
 local lsp_zero = require("lsp-zero")
