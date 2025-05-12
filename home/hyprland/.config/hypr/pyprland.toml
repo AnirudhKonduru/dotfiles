@@ -1,0 +1,6 @@
+[pyprland]
+plugins = [
+    "shift_monitors",
+    "workspaces_follow_focus",
+    "expose"
+]
