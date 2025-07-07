@@ -164,6 +164,7 @@ require("lazy").setup({
     end,
   },
   { "github/copilot.vim", version = "1.36.0" },
+  { "m4xshen/hardtime.nvim", lazy = false, dependencies = { "MunifTanjim/nui.nvim" }, opts = {} },
 })
 
 -- Telescope remaps
