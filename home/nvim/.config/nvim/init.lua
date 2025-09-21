@@ -298,7 +298,7 @@ require("mason-lspconfig").setup({
 
 local lsp_config = require("lspconfig")
 
-lsp_config.rust_analyzer.setup({
+vim.lsp.config("rust_analyzer", {
   settings = {
     ["rust-analyzer"] = {
       cargo = {
@@ -314,7 +314,7 @@ lsp_config.rust_analyzer.setup({
   },
 })
 
-lsp_config.lua_ls.setup({
+vim.lsp.config("lua_ls", {
   on_init = function(client)
     -- I prefer stylua over lua-ls's own formatter
     client.server_capabilities.documentFormattingProvider = false
