@@ -441,23 +441,23 @@ binds {
     Mod+Ctrl+Home { move-column-to-first; }
     Mod+Ctrl+End  { move-column-to-last; }
 
-    Mod+Shift+Left  { focus-monitor-left; }
-    Mod+Shift+Down  { focus-monitor-down; }
-    Mod+Shift+Up    { focus-monitor-up; }
-    Mod+Shift+Right { focus-monitor-right; }
-    Mod+Shift+H     { focus-monitor-left; }
-    Mod+Shift+J     { focus-monitor-down; }
-    Mod+Shift+K     { focus-monitor-up; }
-    Mod+Shift+L     { focus-monitor-right; }
+    Mod+Alt+Left  { focus-monitor-left; }
+    Mod+Alt+Down  { focus-monitor-down; }
+    Mod+Alt+Up    { focus-monitor-up; }
+    Mod+Alt+Right { focus-monitor-right; }
+    Mod+Alt+H     { focus-monitor-left; }
+    Mod+Alt+J     { focus-monitor-down; }
+    Mod+Alt+K     { focus-monitor-up; }
+    Mod+Alt+L     { focus-monitor-right; }
 
-    Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
-    Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
-    Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
-    Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
-    Mod+Shift+Ctrl+H     { move-column-to-monitor-left; }
-    Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
-    Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
-    Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
+    Mod+Alt+Ctrl+Left  { move-column-to-monitor-left; }
+    Mod+Alt+Ctrl+Down  { move-column-to-monitor-down; }
+    Mod+Alt+Ctrl+Up    { move-column-to-monitor-up; }
+    Mod+Alt+Ctrl+Right { move-column-to-monitor-right; }
+    Mod+Alt+Ctrl+H     { move-column-to-monitor-left; }
+    Mod+Alt+Ctrl+J     { move-column-to-monitor-down; }
+    Mod+Alt+Ctrl+K     { move-column-to-monitor-up; }
+    Mod+Alt+Ctrl+L     { move-column-to-monitor-right; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
@@ -557,8 +557,8 @@ binds {
     Mod+BracketRight { consume-or-expel-window-right; }
 
     // More ergonomic alternatives using vim-style keys (same as consume-or-expel above)
-    Mod+Alt+H { consume-or-expel-window-left; }
-    Mod+Alt+L { consume-or-expel-window-right; }
+    Mod+Shift+H { consume-or-expel-window-left; }
+    Mod+Shift+L { consume-or-expel-window-right; }
 
     // Consume one window from the right to the bottom of the focused column.
     Mod+Comma  { consume-window-into-column; }
@@ -566,8 +566,8 @@ binds {
     Mod+Period { expel-window-from-column; }
 
     // More ergonomic alternatives for consume/expel into column
-    Mod+Alt+J { consume-window-into-column; }
-    Mod+Alt+K { expel-window-from-column; }
+    Mod+Shift+J { consume-window-into-column; }
+    Mod+Shift+K { expel-window-from-column; }
 
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
