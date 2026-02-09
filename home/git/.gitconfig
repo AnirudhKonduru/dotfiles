@@ -5,8 +5,8 @@
 
 [alias]
 	c = commit -S 
-	l = log --graph --branches --remotes --tags --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) %C(cyan)<%an>%Creset'
-	ll = log --graph --branches --remotes --tags --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %<(30,trunc)%s %Creset'
+	l = log --graph --branches --remotes --tags --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) %C(cyan)<%an>%C(green) %G?%Creset'
+	ll = log --graph --branches --remotes --tags --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %<(30,trunc)%s %C(cyan)<%an>%C(green) %G?%Creset'
 	sb = status -sb
 	del-dangling-commits = "!sh git reflog expire --expire-unreachable=now --all && git gc --prune=now"
 
