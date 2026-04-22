@@ -1,0 +1,17 @@
+{
+  "lastChangelogVersion": "0.68.0",
+  "defaultProvider": "moonshot",
+  "defaultModel": "kimi-k2.6",
+  "theme": "srcery2",
+  "packages": [
+    "npm:pi-web-access",
+    "npm:pi-interactive-shell",
+    "npm:@axnic/pi-extension-settings",
+    "npm:pi-mcp-adapter",
+    "npm:pi-subagents",
+    "npm:pi-btw",
+    "npm:pi-moonshot"
+  ],
+  "hideThinkingBlock": true,
+  "defaultThinkingLevel": "medium"
+}
