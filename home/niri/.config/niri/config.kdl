@@ -109,6 +109,7 @@ layout {
     // Set gaps around windows in logical pixels.
     gaps 16
 
+    empty-workspace-above-first
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
     //   or right edge of the screen.
@@ -587,10 +588,13 @@ binds {
     // set-column-width "100" will make the column occupy 200 physical screen pixels.
     Mod+Minus { set-column-width "-10%"; }
     Mod+Equal { set-column-width "+10%"; }
+    Mod+Ctrl+Minus { set-column-width "-1"; }
+    Mod+Ctrl+Equal { set-column-width "+1"; }
 
-    // Finer height adjustments when in column with other windows.
-    Mod+Shift+Minus { set-window-height "-10%"; }
-    Mod+Shift+Equal { set-window-height "+10%"; }
+    Mod+Shift+Minus      { set-window-height "-10%"; }
+    Mod+Shift+Equal      { set-window-height "+10%"; }
+    Mod+Shift+Ctrl+Minus { set-window-height "-1"; }
+    Mod+Shift+Ctrl+Equal { set-window-height "+1"; }
 
     // Move the focused window between the floating and the tiling layout.
     Mod+V       { toggle-window-floating; }
